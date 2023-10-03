@@ -1,10 +1,11 @@
-import {React} from "react";
-import {ReactDOM} from "react-dom/client.js";
-import {App} from "/App.jsx";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App"; // Assuming App.jsx is in the same directory as this file.
 import "./index.css";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
