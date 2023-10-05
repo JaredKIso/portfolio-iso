@@ -23,7 +23,7 @@ const Navbar = () => {
           }}
         >
             <img src={logo} alt ="logo" className="w-9 h-9 object-contain" />
-            <p className="text-white text-[18px] font-bold cursour-pointer">Jared <span className="sm:block hidden">| Kell</span></p>
+            <p className="text-white text-[18px] font-bold cursour-pointer flex">Jared.iso &nbsp;<span className="sm:block hidden">| Portfolio</span></p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((Link) => (
@@ -60,7 +60,8 @@ const Navbar = () => {
                   : "text-secondary"
                 } font-poppins font-medium cursor-pointer text-[16px]`}
                 onClick={() => {
-                  setActive(Link.title)
+                  setToggle(!toggle);
+                  setActive(Link.title);
                 }}
               >
                 <a href={`#${Link.id}`}>{Link.title}</a>
